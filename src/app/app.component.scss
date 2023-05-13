@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+// ### Primary
+
+$Light-red: hsl(0, 100%, 67%);
+$Orangey-yellow: hsl(39, 100%, 56%);
+$Green-teal: hsl(166, 100%, 37%);
+$Cobalt-blue: hsl(234, 85%, 45%);
+
+// ## Gradients (background)
+
+$Light-slate-blue : hsl(252, 100%, 67%);
+$Light-royal-blue: hsl(241, 81%, 54%);
+// (circle)
+$Violet-blue: hsla(256, 72%, 46%, 1);
+$Persian-blue: hsla(241, 72%, 46%, 0);
+
+
+
+// ### Neutral
+
+$White: hsl(0, 0%, 100%);
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+$Dark-gray-blue: hsl(224, 30%, 27%);
+
+//GET BEEF IN style-guild.md
+
+.body{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hanken Grotesk',sans-serif;
+}
+.cards{
+    width: 58%;
+    border-radius: 15px;
+    background: 6px 8px 10px rgba(0,0,0,.052);
+    .half-l{
+        .box{
+            padding: 2.5rem 4.1rem;
+            border-radius: 15px;
+            color: white;
+            background: linear-gradient(to bottom,$Light-slate-blue,$Light-royal-blue);
+            .headers{
+                opacity: 75%;
+                font-size: 24px;
+                margin-bottom: 1.5rem;
+            }
+            .score-circle{
+                width: 20vh;
+                height: 20vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: linear-gradient(to bottom,$Violet-blue,$Persian-blue);
+                .your-score{
+                    margin: 0;
+                    font-weight: bold;
+                    font-size: 65px;
+                    text-align: center;
+                    line-height: 2rem;
+                    span{
+                        font-weight: normal;
+                        font-size: 18px;
+                        opacity: 50%;
+                    }
+                }
+            }
+            .expends-headers{
+                margin: 1.5rem 0;
+                font-size: 28px;
+            }
+            .expends-info{
+                line-height: 1.4rem;
+                opacity: 75%;
+                text-align: center;
+            }
+        }
+    }
+    .half-r{
+        padding: 2.5rem 2rem;
+        p{
+            margin: 0;
+        }
+        .headers{
+            font-size: 24px;
+            margin-bottom: 1.5rem;
+        }
+        .box-items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: .5rem;
+            .name-items{
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                p{
+                    margin-left: .5rem;
+                }
+            }
+            .score-items{
+                color: black;
+                font-weight: bold;
+                span{
+                    opacity: .3;
+                }
+            }
+        }
+        .btn-continue{
+            color: white;
+            padding: 1rem;
+            border-radius: 3rem;
+            background: $Dark-gray-blue;
+        }
+        .btn-continue:hover{
+            background: linear-gradient(to bottom,$Light-slate-blue,$Light-royal-blue);
+        }
+    }
+    .half-r{
+        .box-items.items-1{
+            color: $Light-red;
+            background-color: rgba($Light-red,.07);
+        }
+        .box-items.items-2{
+            color: $Orangey-yellow;
+            background-color: rgba($Orangey-yellow,.07);
+        }
+        .box-items.items-3{
+            color: $Green-teal;
+            background-color: rgba($Green-teal,.07);
+        }
+        .box-items.items-4{
+            color: $Cobalt-blue;
+            background-color: rgba($Cobalt-blue,.07);
+        }
+    }
+}
